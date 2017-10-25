@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @saved_article.article_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @saved_article.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_saved_article_path(@saved_article) %> |
+<%= link_to 'Back', saved_articles_path %>
