@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025103648) do
+ActiveRecord::Schema.define(version: 20171028173130) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
     t.integer "rating_id"
@@ -18,22 +21,6 @@ ActiveRecord::Schema.define(version: 20171025103648) do
     t.date "date"
     t.string "source"
     t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "interests", force: :cascade do |t|
-    t.integer "location_id"
-    t.boolean "politics"
-    t.boolean "sports"
-    t.boolean "economy"
-    t.boolean "weather"
-    t.boolean "local"
-    t.boolean "national"
-    t.boolean "world"
-    t.boolean "gadget"
-    t.boolean "fashion"
-    t.boolean "lifestyle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,7 +48,7 @@ ActiveRecord::Schema.define(version: 20171025103648) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "interest_id"
+    t.integer "location_id"
     t.integer "saved_article_id"
     t.string "first_name"
     t.string "last_name"
@@ -70,6 +57,7 @@ ActiveRecord::Schema.define(version: 20171025103648) do
     t.boolean "admin?"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "interests", default: [], array: true
   end
 
 end
