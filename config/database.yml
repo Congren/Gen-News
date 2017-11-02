@@ -17,9 +17,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: demo_test_development
+  database: test_development
   pool: 5
-  username: genews
+  username: gennew
   password: 
   timeout: 5000
  
@@ -47,8 +47,8 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: demo_test_test
+  database: test_test
   pool: 5
-  username: genews
+  username: gennew
   password: 
   timeout: 5000

@@ -17,7 +17,7 @@ class RatingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create rating" do
     assert_difference('Rating.count') do
-      post ratings_url, params: { rating: { details: @rating.details, rating: @rating.rating } }
+      post ratings_url, params: { rating: { details: @rating.details, reliability_score: @rating.reliability_score } }
     end
 
     assert_redirected_to rating_url(Rating.last)
@@ -34,7 +34,7 @@ class RatingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update rating" do
-    patch rating_url(@rating), params: { rating: { details: @rating.details, rating: @rating.rating } }
+    patch rating_url(@rating), params: { rating: { details: @rating.details, reliability_score: @rating.reliability_score } }
     assert_redirected_to rating_url(@rating)
   end
 

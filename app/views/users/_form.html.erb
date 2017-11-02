@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :interest_id %>
-    <%= form.number_field :interest_id, id: :user_interest_id %>
+    <%= form.label :location_id %>
+    <%= form.number_field :location_id, id: :user_location_id %>
   </div>
 
   <div class="field">
@@ -44,6 +44,11 @@
   <div class="field">
     <%= form.label :admin? %>
     <%= form.check_box :admin?, id: :user_admin? %>
+  </div>
+
+  <div class="field">
+    <%= form.label :interests %>
+    <%= form.text_field :interests, id: :user_interests %>
   </div>
 
   <div class="actions">
