@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 #jquery
 gem 'jquery'
 gem 'jquery-rails'
+gem 'validates_timeliness'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
