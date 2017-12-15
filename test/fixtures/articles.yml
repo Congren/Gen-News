@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  date: 2017-12-06
+  source: MyString
+  description: MyString
+  emotional: MyString
+  political: MyString
+  consensus: MyString
+  author: MyString
+  pic: MyString
+
+two:
+  title: MyString
+  date: 2017-12-06
+  source: MyString
+  description: MyString
+  emotional: MyString
+  political: MyString
+  consensus: MyString
+  author: MyString
+  pic: MyString

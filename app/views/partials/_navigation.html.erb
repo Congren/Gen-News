@@ -1,0 +1,48 @@
+      <ul id="nav">
+        <li><a href="#">Trending</a>
+          <ul>
+          <%for article in Article.all %>
+            <li><%= link_to  article.title, article_path(article)%></li>
+          <%end%>
+              <ul>
+               
+              </ul>
+            </li>
+           
+          </ul>
+        </li>
+        <li><a href="#">World</a></li>
+        <li><a href="#">Pittsburgh</a>
+        </li>
+        <li><a href="#">Politics</a> <ul>
+          <%for article in Article.all %>
+            <li><%= link_to  article.title, article_path(article)%></li>
+          <%end%>
+              <ul>
+               
+              </ul>
+            </li>
+           
+          </ul>
+        </li>
+        <li><a href="#">Tech</a>
+          <ul>
+           
+              <ul>
+               
+              </ul>
+            </li>
+        
+          </ul>
+        </li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Sports</a>
+          <ul>
+          
+          </ul>
+        </li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Opinion</a></li>
+      </ul>
+    </div>

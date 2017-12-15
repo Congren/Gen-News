@@ -1,0 +1,46 @@
+
+        <div class="left_column floatleft">
+          <div class="single_left_column_wrapper">
+            <h1 class="title"><%= @article.title %></h1>
+            <h3> <%= @article.date %> </h3>
+            <p id="notice"><%= notice %></p>
+<p>
+  <strong>Source:</strong>
+  <%= @article.source %>
+</p>
+<p>
+  <strong>Author:</strong>
+  <%= @article.author %>
+</p>
+
+<p>
+
+  <%= @article.description %>
+</p>
+
+
+
+<p>
+  <strong>Consensus:</strong>
+  <%= @article.consensus %>
+</p>
+
+
+<p>
+  <strong>Political Impartiality:</strong>
+  <%= @article.political %>
+</p>
+
+<p>
+  <strong>Emotional Neutrality:</strong>
+  <%= @article.emotional %>
+</p>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+
+            
+            
+          </div>
+        </div>

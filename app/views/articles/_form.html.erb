@@ -1,0 +1,62 @@
+<%= form_with(model: article, local: true) do |form| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :article_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :article_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source %>
+    <%= form.text_field :source, id: :article_source %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :article_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :emotional %>
+    <%= form.text_field :emotional, id: :article_emotional %>
+  </div>
+
+  <div class="field">
+    <%= form.label :political %>
+    <%= form.text_field :political, id: :article_political %>
+  </div>
+
+  <div class="field">
+    <%= form.label :consensus %>
+    <%= form.text_field :consensus, id: :article_consensus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author, id: :article_author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pic %>
+    <%= form.text_field :pic, id: :article_pic %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

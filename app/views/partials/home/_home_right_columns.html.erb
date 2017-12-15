@@ -1,0 +1,20 @@
+        <div class="right_column floatright">
+          <div class="single_right_column">
+            <h2 class="title"> Trending Now</h2>
+            <ul>
+              <li>
+               <%for article in Article.all %>
+                  <div class="single_cat_right_content">
+                    <h3><%= article.title%></h3>
+                    <p><%=article.title%></p>
+                    <p class="single_cat_right_content_meta">
+                    <span><%= link_to "Read More", article_path(article)%></span></a><%=article.date%></p>
+                        <div class="rating-circle-text">
+                          <%=((article.emotional.to_f + article.political.to_f + article.consensus.to_f)/3).round(2)%>
+                        </div>
+                </div>
+              </li>
+              <%end%>
+              
+          </div>
+        </div>

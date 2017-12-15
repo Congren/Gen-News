@@ -1,0 +1,90 @@
+      <div class="main_content floatleft">
+        <div class="left_column floatleft">
+          <div class="single_left_column_wrapper">
+            <h2 class="title">World News</h2>
+            <a class="more" href="#">more</a>
+
+                  
+                    
+                    
+                   
+              
+
+            <%for article in Article.all %>
+                <div class="single_left_column floatleft"> <a href="#"><img src= <%=article.pic%>>
+                  <h3><%= article.title%></h3>
+                  <p><%=article.title%></p>
+                <div class="rating-circle-text">
+                      <%=((article.emotional.to_f + article.political.to_f + article.consensus.to_f)/3).round(2)%>
+                </div>
+
+                  <a class="readmore"><%= link_to "Read More", article_path(article)%></a> </div>
+              <%end%>
+   
+          </div>
+          <div class="single_left_column_wrapper">
+            <h2 class="title">Most Reliable</h2>
+            <a class="more" href="#">more</a>
+            <div class="single_left_column floatleft"> <a href="#"><%= image_tag("single_featured") %>
+              <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+              <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper 
+                dolor eu mattis.</p>
+                            <div class="rating-circle-text">
+              9.4
+            </div>
+              <a class="readmore" href="#">read more</a> </div>
+            <div class="single_left_column floatleft"> <a href="#"><%= image_tag("single_featured") %>
+              <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+              <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper 
+                dolor eu mattis.</p>
+                            <div class="rating-circle-text">
+              9.2
+            </div>
+              <a class="readmore" href="#">read more</a> </div>
+            <div class="single_left_column floatleft"> <a href="#"><%= image_tag("single_featured") %>
+              <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+              <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper 
+                dolor eu mattis.</p>
+                            <div class="rating-circle-text">
+              9.5
+            </div>
+              <a class="readmore" href="#">read more</a> </div>
+          </div>
+          <div class="single_left_column_wrapper single_cat_left">
+            <h2 class="title">Tech News</h2>
+            <a class="more" href="#">more</a>
+            <div class="single_cat_left_content floatleft">
+              <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
+              <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ...interdum</p>
+
+              <p class="single_cat_left_content_meta">by <span>John Doe</span> |  29 comments</p>
+                          <div class="rating-circle-text">
+              9.1
+            </div>
+            </div>
+            <div class="single_cat_left_content floatleft">
+              <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
+              <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ...interdum</p>
+              <p class="single_cat_left_content_meta">by <span>John Doe</span> |  29 comments</p>
+                          <div class="rating-circle-text">
+              9.4
+            </div>
+            </div>
+            <div class="single_cat_left_content floatleft">
+              <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
+              <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ...interdum</p>
+              <p class="single_cat_left_content_meta">by <span>John Doe</span> |  29 comments</p>
+                          <div class="rating-circle-text">
+              8.2
+            </div>
+            </div>
+            <div class="single_cat_left_content floatleft">
+              <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
+              <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor ...interdum</p>
+              <p class="single_cat_left_content_meta">by <span>John Doe</span> |  29 comments</p>
+                          <div class="rating-circle-text">
+              6.8
+            </div>
+            </div>
+          </div>
+        </div>
